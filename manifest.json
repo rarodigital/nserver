@@ -1,69 +1,69 @@
 {
   "app": "Nserver",
-  "version": "0.2.2",
-  "latest_version": "0.2.2",
+  "version": "0.2.3",
+  "latest_version": "0.2.3",
   "channels": {
-    "stable": "0.2.2",
-    "beta": "0.2.2"
+    "stable": "0.2.3",
+    "beta": "0.2.3"
   },
-  "install_package": "https://raw.githubusercontent.com/rarodigital/nserver/main/releases/0.2.2/nserver-windows-0.2.2.zip",
-  "install_package_sha256": "938b5f6d1a45f8a3a1f439e17ef6e3a4950964d16105922e3731275e6d487ff6",
+  "install_package": "https://raw.githubusercontent.com/rarodigital/nserver/main/releases/0.2.3/nserver-windows-0.2.3.zip",
+  "install_package_sha256": "26c8ad9684854da7fffb98e0f2c643b3b02141eea2c082e4edabb0882377c57f",
   "changelog": [
-    "Transcrição real via Whisper/OpenAI na Ferramenta 01",
-    "Campo local para configurar OpenAI API Key e Base URL",
-    "Exportação automática em TXT, MD com timestamps e JSON bruto",
-    "Mensagem clara quando a chave de API ainda não estiver configurada",
-    "Versão interna sincronizada entre launcher e painel"
+    "Modo local gratuito de transcrição usando faster-whisper",
+    "Transcrição local passa a ser o padrão, sem precisar pagar OpenAI",
+    "Seleção de modelo local: tiny, base, small ou medium",
+    "OpenAI permanece disponível como modo opcional",
+    "Dependência faster-whisper instalada automaticamente pelo BAT"
   ],
   "files": [
     {
       "path": "README.md",
-      "url": "https://raw.githubusercontent.com/rarodigital/nserver/main/releases/0.2.2/files/README.md",
+      "url": "https://raw.githubusercontent.com/rarodigital/nserver/main/releases/0.2.3/files/README.md",
       "sha256": "94eb40716ac8282474d5b61d00db9eb06f1a25157ef09a639a937047df40b38b"
     },
     {
       "path": "app/launcher.py",
-      "url": "https://raw.githubusercontent.com/rarodigital/nserver/main/releases/0.2.2/files/app/launcher.py",
-      "sha256": "dfdf932157cd4eea0edfcdbcf8cad8555811e8f9ac605997a1de9ae855b29876"
+      "url": "https://raw.githubusercontent.com/rarodigital/nserver/main/releases/0.2.3/files/app/launcher.py",
+      "sha256": "90d08b13df7a26199ec9fff5bf8fc7dfa2226244d50af0d23f22573e45f04e4a"
     },
     {
       "path": "app/processors/__init__.py",
-      "url": "https://raw.githubusercontent.com/rarodigital/nserver/main/releases/0.2.2/files/app/processors/__init__.py",
+      "url": "https://raw.githubusercontent.com/rarodigital/nserver/main/releases/0.2.3/files/app/processors/__init__.py",
       "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
     },
     {
       "path": "app/processors/base.py",
-      "url": "https://raw.githubusercontent.com/rarodigital/nserver/main/releases/0.2.2/files/app/processors/base.py",
+      "url": "https://raw.githubusercontent.com/rarodigital/nserver/main/releases/0.2.3/files/app/processors/base.py",
       "sha256": "9026cbdc760e1aaad6b5e266709259f5979572cb1e6dddc48c32f9066a0d6d8e"
     },
     {
       "path": "app/processors/video.py",
-      "url": "https://raw.githubusercontent.com/rarodigital/nserver/main/releases/0.2.2/files/app/processors/video.py",
-      "sha256": "c52f00a501bfa3bb5d234088bd254fa603b71951c0c7c82f69eb89e495c0e6c0"
+      "url": "https://raw.githubusercontent.com/rarodigital/nserver/main/releases/0.2.3/files/app/processors/video.py",
+      "sha256": "0cf46e2c0ac6d831015d5d012f590d65154539de91e5c3c32ca927b8bd55149b"
     },
     {
       "path": "app/server.py",
-      "url": "https://raw.githubusercontent.com/rarodigital/nserver/main/releases/0.2.2/files/app/server.py",
-      "sha256": "5fbfe484482bec8cd735a6117142a6a8e021ddfe93cf2c774da47ca3c3657899"
+      "url": "https://raw.githubusercontent.com/rarodigital/nserver/main/releases/0.2.3/files/app/server.py",
+      "sha256": "91155174d757ae0437d7397b0eff1d5ae1cce4c76d29ae2451872b429abfa691"
     },
     {
       "path": "app/updater.py",
-      "url": "https://raw.githubusercontent.com/rarodigital/nserver/main/releases/0.2.2/files/app/updater.py",
+      "url": "https://raw.githubusercontent.com/rarodigital/nserver/main/releases/0.2.3/files/app/updater.py",
       "sha256": "62c10f9260bf57f9f9ea4698ff173a2040e4af215b4d089707e20f8d489572f8"
     },
     {
       "path": "iniciar-nserver.bat",
-      "url": "https://raw.githubusercontent.com/rarodigital/nserver/main/releases/0.2.2/files/iniciar-nserver.bat",
+      "url": "https://raw.githubusercontent.com/rarodigital/nserver/main/releases/0.2.3/files/iniciar-nserver.bat",
       "sha256": "ad888d43239241a4426776c33a065733161372bd1fd9d1921a37c9b7159145f8"
     },
     {
       "path": "requirements.txt",
-      "url": "https://raw.githubusercontent.com/rarodigital/nserver/main/releases/0.2.2/files/requirements.txt",
-      "sha256": "acd660ec540eb3a7451c523cc0f788a33388c7b5a0f152753714c9b61782180b"
+      "url": "https://raw.githubusercontent.com/rarodigital/nserver/main/releases/0.2.3/files/requirements.txt",
+      "sha256": "6cba9c9b5bf63dec1e3335f05c002aa332eb4afa07f3a79a1faac4296a260f2c"
     },
     {
       "path": "system/update-manifest.example.json",
-      "url": "https://raw.githubusercontent.com/rarodigital/nserver/main/releases/0.2.2/files/system/update-manifest.example.json",
+      "url": "https://raw.githubusercontent.com/rarodigital/nserver/main/releases/0.2.3/files/system/update-manifest.example.json",
       "sha256": "a4056162df090ca241bbab3c447b3eca957c7833731885524e1a6ce30c50d73a"
     }
   ]
