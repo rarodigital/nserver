@@ -4,7 +4,7 @@ Repositório público de distribuição e atualizações do Nserver.
 
 ## Instalação inicial
 
-Baixe `releases/0.3.1/nserver-windows-0.3.1.zip`, extraia o conteúdo diretamente em `C:\Nserver` e execute `iniciar-nserver.bat`.
+Baixe `releases/0.3.2/nserver-windows-0.3.2.zip`, extraia o conteúdo diretamente em `C:\Nserver` e execute `iniciar-nserver.bat`.
 
 ## Manifesto de atualização
 
@@ -22,8 +22,3 @@ Pastas preservadas sempre:
 - `midias`
 - `backups`
 - `logs`
-
-## Canais
-
-- `stable`: versões testadas
-- `beta`: versões antecipadas
