@@ -1,0 +1,4 @@
+yt-dlp>=2025.1.0
+
+# Transcrição local gratuita. Pode demorar para instalar na primeira vez.
+faster-whisper>=1.1.0
