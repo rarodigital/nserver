@@ -14,6 +14,8 @@ https://raw.githubusercontent.com/rarodigital/nserver/main/manifest.json
 
 O Nserver verifica esse manifesto ao abrir pelo launcher e também pela página **Atualizações**.
 
+As atualizações são aplicadas arquivo a arquivo, com checksum SHA256 e backup automático.
+
 Pastas preservadas sempre:
 
 - `userdata`
