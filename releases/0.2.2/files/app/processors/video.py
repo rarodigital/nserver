@@ -1,0 +1,261 @@
+from __future__ import annotations
+
+import json
+import os
+import shutil
+import subprocess
+import tempfile
+import time
+import urllib.request
+import uuid
+from pathlib import Path
+from typing import Any
+from urllib.parse import urlparse
+
+from .base import Processor, ProcessorResult
+
+PROTECTED_HINTS = (
+    "login", "sign in", "signin", "private", "premium", "members", "cookies",
+    "authenticate", "authentication", "forbidden", "not available", "permission",
+)
+
+
+def _yt_dlp_cmd() -> str | None:
+    return shutil.which("yt-dlp")
+
+
+def _platform(url: str) -> str:
+    host = (urlparse(url).netloc or "").lower().replace("www.", "")
+    if "youtube" in host or "youtu.be" in host:
+        return "YouTube"
+    if "tiktok" in host:
+        return "TikTok"
+    if "instagram" in host:
+        return "Instagram"
+    if "facebook" in host or "fb.watch" in host:
+        return "Facebook"
+    if "twitter" in host or host == "x.com":
+        return "X / Twitter"
+    if "vimeo" in host:
+        return "Vimeo"
+    return host or "Plataforma pública"
+
+
+def _safe_name(value: str) -> str:
+    keep = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789-_. "
+    cleaned = "".join(ch for ch in value if ch in keep).strip().replace("  ", " ")
+    return cleaned[:90] or "video"
+
+
+def _run(args: list[str], timeout: int = 1200) -> subprocess.CompletedProcess:
+    return subprocess.run(args, capture_output=True, text=True, timeout=timeout)
+
+
+def _protected_message(stderr: str) -> str | None:
+    low = stderr.lower()
+    if any(h in low for h in PROTECTED_HINTS):
+        return "Este conteúdo requer autenticação para ser acessado. Faça login na plataforma correspondente para continuar."
+    return None
+
+
+def _format_ts(seconds: float | int) -> str:
+    total = int(float(seconds or 0))
+    h, rem = divmod(total, 3600)
+    m, s = divmod(rem, 60)
+    return f"{h:02d}:{m:02d}:{s:02d}"
+
+
+class VideoProcessor(Processor):
+    id = "video-downloader"
+    name = "Downloader e Processador de Vídeos"
+    description = "Analisa links públicos, baixa vídeo/áudio, transcreve e prepara cortes."
+
+    def analyze(self, url: str) -> ProcessorResult:
+        if not url.startswith(("http://", "https://")):
+            return ProcessorResult(False, "Cole uma URL válida começando com http:// ou https://")
+        exe = _yt_dlp_cmd()
+        if not exe:
+            return ProcessorResult(False, "Dependência yt-dlp não encontrada. Feche o Nserver, execute novamente o iniciar-nserver.bat e aguarde a instalação automática.")
+        proc = _run([exe, "--dump-single-json", "--no-playlist", url], timeout=180)
+        if proc.returncode != 0:
+            msg = _protected_message(proc.stderr) or "Não consegui analisar esse link. Verifique se ele é público e tente novamente."
+            return ProcessorResult(False, msg, {"details": proc.stderr[-1000:]})
+        try:
+            info = json.loads(proc.stdout)
+        except Exception:
+            return ProcessorResult(False, "A análise retornou dados inválidos.")
+        formats = []
+        seen = set()
+        for item in info.get("formats") or []:
+            height = item.get("height")
+            ext = item.get("ext")
+            if height and ext:
+                label = f"{height}p {ext}"
+                if label not in seen:
+                    formats.append({"height": height, "ext": ext, "label": label})
+                    seen.add(label)
+        formats = sorted(formats, key=lambda x: x["height"])
+        data = {
+            "title": info.get("title") or "Sem título",
+            "duration": info.get("duration") or 0,
+            "duration_text": self._duration(info.get("duration") or 0),
+            "thumbnail": info.get("thumbnail") or "",
+            "platform": _platform(url),
+            "resolutions": formats[-12:],
+            "webpage_url": info.get("webpage_url") or url,
+        }
+        return ProcessorResult(True, "Vídeo analisado com sucesso.", data)
+
+    def download_video(self, url: str, quality: str = "720", ext: str = "mp4") -> ProcessorResult:
+        exe = _yt_dlp_cmd()
+        if not exe:
+            return ProcessorResult(False, "yt-dlp não encontrado.")
+        outdir = self.media_root / "Videos"
+        outdir.mkdir(parents=True, exist_ok=True)
+        outtmpl = str(outdir / "%(title).90s-%(id)s.%(ext)s")
+        fmt = f"bv*[height<={quality}]+ba/b[height<={quality}]/b"
+        args = [exe, "--no-playlist", "-f", fmt, "--merge-output-format", ext, "-o", outtmpl, url]
+        proc = _run(args, timeout=3600)
+        if proc.returncode != 0:
+            return ProcessorResult(False, _protected_message(proc.stderr) or "Falha ao baixar o vídeo.", {"details": proc.stderr[-1000:]})
+        return ProcessorResult(True, "Vídeo salvo no NServer/Midias/Videos.", {"folder": str(outdir), "log": proc.stdout[-1000:]})
+
+    def extract_audio(self, url: str, audio_format: str = "mp3", quality: str = "192") -> ProcessorResult:
+        exe = _yt_dlp_cmd()
+        if not exe:
+            return ProcessorResult(False, "yt-dlp não encontrado.")
+        outdir = self.media_root / "Audios"
+        outdir.mkdir(parents=True, exist_ok=True)
+        outtmpl = str(outdir / "%(title).90s-%(id)s.%(ext)s")
+        args = [exe, "--no-playlist", "-x", "--audio-format", audio_format, "--audio-quality", quality + "K", "-o", outtmpl, url]
+        proc = _run(args, timeout=3600)
+        if proc.returncode != 0:
+            return ProcessorResult(False, _protected_message(proc.stderr) or "Falha ao extrair o áudio. Verifique se o FFmpeg está instalado.", {"details": proc.stderr[-1000:]})
+        return ProcessorResult(True, "Áudio salvo no NServer/Midias/Audios.", {"folder": str(outdir), "log": proc.stdout[-1000:]})
+
+    def _settings(self) -> dict[str, Any]:
+        path = self.root / "userdata" / "config.json"
+        data: dict[str, Any] = {}
+        if path.exists():
+            try:
+                data = json.loads(path.read_text(encoding="utf-8"))
+            except Exception:
+                data = {}
+        return data
+
+    def _openai_key(self) -> str:
+        return (os.environ.get("OPENAI_API_KEY") or self._settings().get("openai_api_key") or "").strip()
+
+    def _openai_base(self) -> str:
+        return (os.environ.get("OPENAI_BASE_URL") or self._settings().get("openai_base_url") or "https://api.openai.com/v1").rstrip("/")
+
+    def _download_audio_temp(self, url: str, tmp: Path) -> Path:
+        exe = _yt_dlp_cmd()
+        if not exe:
+            raise RuntimeError("yt-dlp não encontrado.")
+        outtmpl = str(tmp / "%(id)s.%(ext)s")
+        proc = _run([exe, "--no-playlist", "-f", "ba/bestaudio/b", "--print", "after_move:filepath", "-o", outtmpl, url], timeout=3600)
+        if proc.returncode != 0:
+            raise RuntimeError(_protected_message(proc.stderr) or "Não consegui baixar o áudio para transcrição.")
+        candidates = [Path(line.strip()) for line in proc.stdout.splitlines() if line.strip()]
+        for path in reversed(candidates):
+            if path.exists() and path.is_file():
+                return path
+        files = [p for p in tmp.iterdir() if p.is_file()]
+        if files:
+            return max(files, key=lambda p: p.stat().st_size)
+        raise RuntimeError("Áudio baixado não encontrado.")
+
+    def _openai_transcribe(self, audio_path: Path) -> dict[str, Any]:
+        key = self._openai_key()
+        if not key:
+            raise RuntimeError("Configure uma chave OpenAI na tela da ferramenta antes de transcrever.")
+        boundary = "----NserverBoundary" + uuid.uuid4().hex
+        fields = [
+            ("model", "whisper-1"),
+            ("response_format", "verbose_json"),
+            ("timestamp_granularities[]", "segment"),
+        ]
+        body = bytearray()
+        for name, value in fields:
+            body.extend(f"--{boundary}\r\n".encode())
+            body.extend(f'Content-Disposition: form-data; name="{name}"\r\n\r\n{value}\r\n'.encode())
+        body.extend(f"--{boundary}\r\n".encode())
+        body.extend(f'Content-Disposition: form-data; name="file"; filename="{audio_path.name}"\r\n'.encode())
+        body.extend(b"Content-Type: application/octet-stream\r\n\r\n")
+        body.extend(audio_path.read_bytes())
+        body.extend(f"\r\n--{boundary}--\r\n".encode())
+        req = urllib.request.Request(
+            self._openai_base() + "/audio/transcriptions",
+            data=bytes(body),
+            headers={"Authorization": f"Bearer {key}", "Content-Type": f"multipart/form-data; boundary={boundary}"},
+            method="POST",
+        )
+        try:
+            with urllib.request.urlopen(req, timeout=1800) as res:
+                return json.loads(res.read().decode("utf-8"))
+        except Exception as exc:
+            raise RuntimeError(f"Falha na transcrição via Whisper/OpenAI: {exc}") from exc
+
+    def transcribe(self, url: str) -> ProcessorResult:
+        if not url.startswith(("http://", "https://")):
+            return ProcessorResult(False, "Cole uma URL válida começando com http:// ou https://")
+        folder = self.media_root / "Transcricoes"
+        folder.mkdir(parents=True, exist_ok=True)
+        stamp = time.strftime("%Y%m%d-%H%M%S")
+        try:
+            info = self.analyze(url)
+            title = ((info.data or {}).get("title") if info.ok else "transcricao") or "transcricao"
+            base = folder / f"{_safe_name(title)}-{stamp}"
+            with tempfile.TemporaryDirectory() as td:
+                audio_path = self._download_audio_temp(url, Path(td))
+                if audio_path.stat().st_size > 24 * 1024 * 1024:
+                    return ProcessorResult(False, "O áudio ficou maior que o limite do Whisper API (~25 MB). Vou precisar adicionar divisão automática em partes na próxima etapa.")
+                data = self._openai_transcribe(audio_path)
+            text = (data.get("text") or "").strip()
+            segments = data.get("segments") or []
+            txt_path = base.with_suffix(".txt")
+            md_path = base.with_suffix(".md")
+            json_path = base.with_suffix(".json")
+            txt_path.write_text(text + "\n", encoding="utf-8")
+            lines = [f"# Transcrição — {title}", "", f"URL: {url}", f"Gerado em: {time.strftime('%Y-%m-%d %H:%M:%S')}", "", "## Texto completo", "", text, "", "## Com timestamps", ""]
+            if segments:
+                for seg in segments:
+                    lines.append(f"[{_format_ts(seg.get('start', 0))}] {seg.get('text', '').strip()}")
+            else:
+                lines.append("Timestamps não retornados pelo provedor.")
+            md_path.write_text("\n".join(lines) + "\n", encoding="utf-8")
+            json_path.write_text(json.dumps(data, ensure_ascii=False, indent=2), encoding="utf-8")
+            return ProcessorResult(True, "Transcrição concluída e salva em NServer/Midias/Transcricoes.", {"txt": str(txt_path), "md": str(md_path), "json": str(json_path)})
+        except Exception as exc:
+            return ProcessorResult(False, str(exc))
+
+    def viral_clips(self, url: str, count: int = 3, max_seconds: int = 60) -> ProcessorResult:
+        folder = self.media_root / "Cortes"
+        folder.mkdir(parents=True, exist_ok=True)
+        stamp = time.strftime("%Y%m%d-%H%M%S")
+        path = folder / f"plano-cortes-{stamp}.md"
+        path.write_text(f"# Plano de cortes virais\n\nURL: {url}\nQuantidade: {count}\nDuração máxima: {max_seconds}s\n\nMódulo de detecção automática, legendas e renderização vertical será conectado em etapa futura.\n", encoding="utf-8")
+        return ProcessorResult(True, "Plano de cortes criado. Renderização automática entra na próxima fase.", {"file": str(path)})
+
+    def run(self, payload: dict[str, Any]) -> ProcessorResult:
+        action = payload.get("action")
+        url = payload.get("url", "").strip()
+        if action == "analyze":
+            return self.analyze(url)
+        if action == "download_video":
+            return self.download_video(url, str(payload.get("quality") or "720"), str(payload.get("format") or "mp4"))
+        if action == "extract_audio":
+            return self.extract_audio(url, str(payload.get("format") or "mp3"), str(payload.get("quality") or "192"))
+        if action == "transcribe":
+            return self.transcribe(url)
+        if action == "viral_clips":
+            return self.viral_clips(url, int(payload.get("count") or 3), int(payload.get("max_seconds") or 60))
+        return ProcessorResult(False, "Ação desconhecida.")
+
+    @staticmethod
+    def _duration(seconds: int) -> str:
+        seconds = int(seconds or 0)
+        h, rem = divmod(seconds, 3600)
+        m, s = divmod(rem, 60)
+        return f"{h:02d}:{m:02d}:{s:02d}" if h else f"{m:02d}:{s:02d}"
