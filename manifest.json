@@ -1,123 +1,123 @@
 {
   "app": "Nserver",
-  "version": "0.3.14",
-  "latest_version": "0.3.14",
+  "version": "0.3.15",
+  "latest_version": "0.3.15",
   "channels": {
-    "stable": "0.3.14",
-    "beta": "0.3.14"
+    "stable": "0.3.15",
+    "beta": "0.3.15"
   },
-  "install_package": "https://raw.githubusercontent.com/rarodigital/nserver/main/releases/0.3.14/nserver-windows-0.3.14.zip",
-  "install_package_sha256": "7829d6dc495ad25f218c8b9056e98ea5af2d9ac94683508c17fa1c38a9dd58f1",
+  "install_package": "https://raw.githubusercontent.com/rarodigital/nserver/main/releases/0.3.15/nserver-windows-0.3.15.zip",
+  "install_package_sha256": "8494e5801d44906f5686a53c68584eed2275321383b0b0eecdacaa5b0245046c",
   "changelog": [
-    "Hotfix focado no upload/arquivo da Ferramenta 04 para vídeos TikTok em HEVC/H.265",
-    "Quando o editor detecta HEVC, gera automaticamente um proxy H.264 para o player do navegador",
-    "O arquivo original continua sendo a fonte do editor; o proxy é usado apenas para preview/play_url",
-    "Testado com MP4 HEVC sintético: probe retornou video_codec hevc, preview_source H.264 e play_url funcional"
+    "Adiciona tela/estado de carregamento no player da Ferramenta 04",
+    "Para HEVC/TikTok, o player é limpo enquanto o Nserver prepara o preview H.264",
+    "Só define o src do player após receber o play_url pronto, reduzindo erro visual de MIME/formato",
+    "Testado JS da página com node --check e probe HEVC com preview_source/play_url"
   ],
   "files": [
     {
       "path": "README.md",
-      "url": "https://raw.githubusercontent.com/rarodigital/nserver/main/releases/0.3.14/files/README.md",
+      "url": "https://raw.githubusercontent.com/rarodigital/nserver/main/releases/0.3.15/files/README.md",
       "sha256": "94eb40716ac8282474d5b61d00db9eb06f1a25157ef09a639a937047df40b38b"
     },
     {
       "path": "requirements.txt",
-      "url": "https://raw.githubusercontent.com/rarodigital/nserver/main/releases/0.3.14/files/requirements.txt",
+      "url": "https://raw.githubusercontent.com/rarodigital/nserver/main/releases/0.3.15/files/requirements.txt",
       "sha256": "ac2ab1121d08e6be7702b8b48f9aab84e069cc67dae34d5d16c24745fef388b5"
     },
     {
       "path": "iniciar-nserver.bat",
-      "url": "https://raw.githubusercontent.com/rarodigital/nserver/main/releases/0.3.14/files/iniciar-nserver.bat",
+      "url": "https://raw.githubusercontent.com/rarodigital/nserver/main/releases/0.3.15/files/iniciar-nserver.bat",
       "sha256": "ad888d43239241a4426776c33a065733161372bd1fd9d1921a37c9b7159145f8"
     },
     {
       "path": "app/server.py",
-      "url": "https://raw.githubusercontent.com/rarodigital/nserver/main/releases/0.3.14/files/app/server.py",
-      "sha256": "7d7ae70bcca8d413c2a47e73643a37c7e5a1d65cd622c5143ba32493f96c4e7e"
+      "url": "https://raw.githubusercontent.com/rarodigital/nserver/main/releases/0.3.15/files/app/server.py",
+      "sha256": "25cf03fc6ea7f5c0cfb15ccb17504c5ed5822979c612b70e3de0d6bcd3cd0a7b"
     },
     {
       "path": "app/updater.py",
-      "url": "https://raw.githubusercontent.com/rarodigital/nserver/main/releases/0.3.14/files/app/updater.py",
+      "url": "https://raw.githubusercontent.com/rarodigital/nserver/main/releases/0.3.15/files/app/updater.py",
       "sha256": "62c10f9260bf57f9f9ea4698ff173a2040e4af215b4d089707e20f8d489572f8"
     },
     {
       "path": "app/launcher.py",
-      "url": "https://raw.githubusercontent.com/rarodigital/nserver/main/releases/0.3.14/files/app/launcher.py",
-      "sha256": "7b13143e9c06f83648f721f807efb5ad44ca0633cb57848c151ac05596811f4b"
+      "url": "https://raw.githubusercontent.com/rarodigital/nserver/main/releases/0.3.15/files/app/launcher.py",
+      "sha256": "3be79657acf357acc5f1dd6521b1eddb5f21548d9faaccbd2e08cc0136ea7513"
     },
     {
       "path": "app/processors/__init__.py",
-      "url": "https://raw.githubusercontent.com/rarodigital/nserver/main/releases/0.3.14/files/app/processors/__init__.py",
+      "url": "https://raw.githubusercontent.com/rarodigital/nserver/main/releases/0.3.15/files/app/processors/__init__.py",
       "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
     },
     {
       "path": "app/processors/base.py",
-      "url": "https://raw.githubusercontent.com/rarodigital/nserver/main/releases/0.3.14/files/app/processors/base.py",
+      "url": "https://raw.githubusercontent.com/rarodigital/nserver/main/releases/0.3.15/files/app/processors/base.py",
       "sha256": "9026cbdc760e1aaad6b5e266709259f5979572cb1e6dddc48c32f9066a0d6d8e"
     },
     {
       "path": "app/processors/video.py",
-      "url": "https://raw.githubusercontent.com/rarodigital/nserver/main/releases/0.3.14/files/app/processors/video.py",
+      "url": "https://raw.githubusercontent.com/rarodigital/nserver/main/releases/0.3.15/files/app/processors/video.py",
       "sha256": "41c456444981c6e32b5d13f78b82a67885c9ae7912534a78388b3c49eb2e254f"
     },
     {
       "path": "app/processors/editor.py",
-      "url": "https://raw.githubusercontent.com/rarodigital/nserver/main/releases/0.3.14/files/app/processors/editor.py",
+      "url": "https://raw.githubusercontent.com/rarodigital/nserver/main/releases/0.3.15/files/app/processors/editor.py",
       "sha256": "3f6bf905da15908f46898b632460dad852d3cd5933fcd7d201c51e710d4352f9"
     },
     {
       "path": "app/processors/media.py",
-      "url": "https://raw.githubusercontent.com/rarodigital/nserver/main/releases/0.3.14/files/app/processors/media.py",
+      "url": "https://raw.githubusercontent.com/rarodigital/nserver/main/releases/0.3.15/files/app/processors/media.py",
       "sha256": "53628a228cdd3881f94212aecf0690b6cefc3cbf2db6c3bb1e8ae66d700171ab"
     },
     {
       "path": "system/update-manifest.example.json",
-      "url": "https://raw.githubusercontent.com/rarodigital/nserver/main/releases/0.3.14/files/system/update-manifest.example.json",
+      "url": "https://raw.githubusercontent.com/rarodigital/nserver/main/releases/0.3.15/files/system/update-manifest.example.json",
       "sha256": "a4056162df090ca241bbab3c447b3eca957c7833731885524e1a6ce30c50d73a"
     },
     {
       "path": "tools/cut-editor/analyze_to_cuts.py",
-      "url": "https://raw.githubusercontent.com/rarodigital/nserver/main/releases/0.3.14/files/tools/cut-editor/analyze_to_cuts.py",
+      "url": "https://raw.githubusercontent.com/rarodigital/nserver/main/releases/0.3.15/files/tools/cut-editor/analyze_to_cuts.py",
       "sha256": "2ba06b1749f244b86e320e13113fa9261689ddbd6c9e131bba6eb88f96368e99"
     },
     {
       "path": "tools/cut-editor/render_from_cuts.py",
-      "url": "https://raw.githubusercontent.com/rarodigital/nserver/main/releases/0.3.14/files/tools/cut-editor/render_from_cuts.py",
+      "url": "https://raw.githubusercontent.com/rarodigital/nserver/main/releases/0.3.15/files/tools/cut-editor/render_from_cuts.py",
       "sha256": "cca014ad3b146408da3d1139b7709baa628bd9b175e9927bc2126af3d242cf18"
     },
     {
       "path": "tools/cut-editor/render_with_captions.py",
-      "url": "https://raw.githubusercontent.com/rarodigital/nserver/main/releases/0.3.14/files/tools/cut-editor/render_with_captions.py",
+      "url": "https://raw.githubusercontent.com/rarodigital/nserver/main/releases/0.3.15/files/tools/cut-editor/render_with_captions.py",
       "sha256": "2204ccc409806c4335ecd5bd036cf2ce4cba3ed7589f6a64d5b77e9c969b825e"
     },
     {
       "path": "tools/cut-editor/simple_silence_to_cuts.py",
-      "url": "https://raw.githubusercontent.com/rarodigital/nserver/main/releases/0.3.14/files/tools/cut-editor/simple_silence_to_cuts.py",
+      "url": "https://raw.githubusercontent.com/rarodigital/nserver/main/releases/0.3.15/files/tools/cut-editor/simple_silence_to_cuts.py",
       "sha256": "e259d6c95f5046dc20751d8210305885824e5cf16ffaf6ec4162d99fdf399697"
     },
     {
       "path": "tools/cut-editor/transcribe_with_elevenlabs.py",
-      "url": "https://raw.githubusercontent.com/rarodigital/nserver/main/releases/0.3.14/files/tools/cut-editor/transcribe_with_elevenlabs.py",
+      "url": "https://raw.githubusercontent.com/rarodigital/nserver/main/releases/0.3.15/files/tools/cut-editor/transcribe_with_elevenlabs.py",
       "sha256": "0b71d5022fbae6e35dd04c3b190fd99b50d7f62bcd65fb68909dcab9f612c816"
     },
     {
       "path": "tools/cut-editor/transcribe_with_whisper.py",
-      "url": "https://raw.githubusercontent.com/rarodigital/nserver/main/releases/0.3.14/files/tools/cut-editor/transcribe_with_whisper.py",
+      "url": "https://raw.githubusercontent.com/rarodigital/nserver/main/releases/0.3.15/files/tools/cut-editor/transcribe_with_whisper.py",
       "sha256": "2f5d750297cfd48de66c43294d4485372de62d54ef6d0e4c0ae7e47e52e436d7"
     },
     {
       "path": "skills/silence-cut/scripts/silence_cut_v1.py",
-      "url": "https://raw.githubusercontent.com/rarodigital/nserver/main/releases/0.3.14/files/skills/silence-cut/scripts/silence_cut_v1.py",
+      "url": "https://raw.githubusercontent.com/rarodigital/nserver/main/releases/0.3.15/files/skills/silence-cut/scripts/silence_cut_v1.py",
       "sha256": "2d7943a0c5743bbfdb40169a34e6ed1f4f0d7cc8096d03577cae0eff400e5172"
     },
     {
       "path": "skills/silence-cut/scripts/silence_cut_v3.py",
-      "url": "https://raw.githubusercontent.com/rarodigital/nserver/main/releases/0.3.14/files/skills/silence-cut/scripts/silence_cut_v3.py",
+      "url": "https://raw.githubusercontent.com/rarodigital/nserver/main/releases/0.3.15/files/skills/silence-cut/scripts/silence_cut_v3.py",
       "sha256": "84d4cb94d48c5dcf61e51c9e226e22f918dea5a1034791e9dd8682a33d59b4ce"
     },
     {
       "path": "skills/silence-cut/scripts/silence_cut_v4.py",
-      "url": "https://raw.githubusercontent.com/rarodigital/nserver/main/releases/0.3.14/files/skills/silence-cut/scripts/silence_cut_v4.py",
+      "url": "https://raw.githubusercontent.com/rarodigital/nserver/main/releases/0.3.15/files/skills/silence-cut/scripts/silence_cut_v4.py",
       "sha256": "59ab8335a318d73827e452dfbe853d646f1ef9d90b676ae3ef41cc95c1e57b8e"
     }
   ]

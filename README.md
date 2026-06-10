@@ -54,3 +54,7 @@ Hotfix focado: carregamento de vídeo da Biblioteca na Ferramenta 04 agora não 
 ## Versão 0.3.14
 
 Hotfix do editor: vídeos TikTok em HEVC/H.265 ganham proxy H.264 automático para preview no navegador, sem trocar o arquivo original do projeto.
+
+## Versão 0.3.15
+
+Melhora a experiência do editor com HEVC/TikTok: mostra carregamento enquanto gera preview H.264 e só carrega o player depois do `play_url` estar pronto.
