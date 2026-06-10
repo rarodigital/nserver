@@ -66,3 +66,7 @@ URL na Ferramenta 04 agora vira fonte temporária do editor, sem salvar/duplicar
 ## Versão 0.3.17
 
 Corrige Analisar/Cortar na Ferramenta 04: fontes temporárias de URL são usadas corretamente e scripts rodam com o Python do próprio Nserver no Windows.
+
+## Versão 0.3.18
+
+Corrige WinError 2 no Analisar/Cortar: scripts do CutFlow agora recebem o caminho correto do FFmpeg do Nserver e não dependem do PATH do Windows.
