@@ -58,3 +58,7 @@ Hotfix do editor: vídeos TikTok em HEVC/H.265 ganham proxy H.264 automático pa
 ## Versão 0.3.15
 
 Melhora a experiência do editor com HEVC/TikTok: mostra carregamento enquanto gera preview H.264 e só carrega o player depois do `play_url` estar pronto.
+
+## Versão 0.3.16
+
+URL na Ferramenta 04 agora vira fonte temporária do editor, sem salvar/duplicar o vídeo original na Biblioteca. O resultado final continua sendo exportado para a Biblioteca.
