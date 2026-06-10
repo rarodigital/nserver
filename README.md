@@ -38,3 +38,7 @@ Reimplementa a Ferramenta 04 como CutFlow Studio: corte de silêncios, `cuts.jso
 ## Versão 0.3.10
 
 Corrige entradas da Ferramenta 04: Biblioteca/Upload/URL visíveis, aba Legenda independente, rota `/library` e streaming de arquivos restaurados.
+
+## Versão 0.3.11
+
+Hotfix: restaura Atualizações, melhora URL/upload no CutFlow e corrige duração dos Cortes Virais quando `ffprobe` não está disponível.
