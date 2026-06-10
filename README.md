@@ -46,3 +46,7 @@ Hotfix: restaura Atualizações, melhora URL/upload no CutFlow e corrige duraç�
 ## Versão 0.3.12
 
 Corrige o JavaScript da Ferramenta 04, simplifica a Etapa 1 para uma única origem selecionável e finaliza o fallback de duração dos Cortes Virais.
+
+## Versão 0.3.13
+
+Hotfix focado: carregamento de vídeo da Biblioteca na Ferramenta 04 agora não depende de `ffprobe` estar instalado no PATH do Windows.
