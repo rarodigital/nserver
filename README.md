@@ -50,3 +50,7 @@ Corrige o JavaScript da Ferramenta 04, simplifica a Etapa 1 para uma única orig
 ## Versão 0.3.13
 
 Hotfix focado: carregamento de vídeo da Biblioteca na Ferramenta 04 agora não depende de `ffprobe` estar instalado no PATH do Windows.
+
+## Versão 0.3.14
+
+Hotfix do editor: vídeos TikTok em HEVC/H.265 ganham proxy H.264 automático para preview no navegador, sem trocar o arquivo original do projeto.
