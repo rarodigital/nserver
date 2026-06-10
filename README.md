@@ -62,3 +62,7 @@ Melhora a experiência do editor com HEVC/TikTok: mostra carregamento enquanto g
 ## Versão 0.3.16
 
 URL na Ferramenta 04 agora vira fonte temporária do editor, sem salvar/duplicar o vídeo original na Biblioteca. O resultado final continua sendo exportado para a Biblioteca.
+
+## Versão 0.3.17
+
+Corrige Analisar/Cortar na Ferramenta 04: fontes temporárias de URL são usadas corretamente e scripts rodam com o Python do próprio Nserver no Windows.
