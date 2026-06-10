@@ -34,3 +34,7 @@ Padroniza entrada de mídia com URL, Biblioteca e Upload; adiciona Gerenciador d
 ## Versão 0.3.9
 
 Reimplementa a Ferramenta 04 como CutFlow Studio: corte de silêncios, `cuts.json`, preview protegido, render final e legenda dentro do estilo Nserver.
+
+## Versão 0.3.10
+
+Corrige entradas da Ferramenta 04: Biblioteca/Upload/URL visíveis, aba Legenda independente, rota `/library` e streaming de arquivos restaurados.
