@@ -42,3 +42,7 @@ Corrige entradas da Ferramenta 04: Biblioteca/Upload/URL visíveis, aba Legenda 
 ## Versão 0.3.11
 
 Hotfix: restaura Atualizações, melhora URL/upload no CutFlow e corrige duração dos Cortes Virais quando `ffprobe` não está disponível.
+
+## Versão 0.3.12
+
+Corrige o JavaScript da Ferramenta 04, simplifica a Etapa 1 para uma única origem selecionável e finaliza o fallback de duração dos Cortes Virais.
