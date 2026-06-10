@@ -26,3 +26,7 @@ Pastas preservadas sempre:
 ## Versão 0.3.7
 
 Inclui a Ferramenta 04 — Editor de Vídeo, com timeline de cortes, preview/final e saída em `midias/Editados`.
+
+## Versão 0.3.8
+
+Padroniza entrada de mídia com URL, Biblioteca e Upload; adiciona Gerenciador de Mídia Central; torna o histórico recolhível; e faz Cortes Virais gerar arquivos reais em `midias/Cortes`.
