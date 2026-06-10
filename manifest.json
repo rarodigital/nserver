@@ -1,69 +1,74 @@
 {
   "app": "Nserver",
-  "version": "0.3.6",
-  "latest_version": "0.3.6",
+  "version": "0.3.7",
+  "latest_version": "0.3.7",
   "channels": {
-    "stable": "0.3.6",
-    "beta": "0.3.6"
+    "stable": "0.3.7",
+    "beta": "0.3.7"
   },
-  "install_package": "https://raw.githubusercontent.com/rarodigital/nserver/main/releases/0.3.6/nserver-windows-0.3.6.zip",
-  "install_package_sha256": "7161d652da2e96f37366f677432dbee55a541119b8604f916afa8febc92cbb92",
+  "install_package": "https://raw.githubusercontent.com/rarodigital/nserver/main/releases/0.3.7/nserver-windows-0.3.7.zip",
+  "install_package_sha256": "880e28291c57c44a056f7edc08f726c0733f9b7e738d4fa8769d4ec43b26fa42",
   "changelog": [
-    "Dashboard separado em 3 ferramentas: Downloader, Transcrição e Cortes Virais",
-    "Downloads temporários para dispositivo não aparecem mais na Biblioteca permanente",
-    "Extração de áudio MP3/WAV usa o mesmo FFmpeg automático do vídeo",
-    "Transcrição voltou a oferecer formato MD além de TXT/DOCX/PDF",
-    "Cortes Virais agora gera plano/ranking inicial com notas e trechos sugeridos"
+    "Nova Ferramenta 04 — Editor de Vídeo inspirada no fluxo Kael/video-use",
+    "Editor permite escolher vídeo da Biblioteca, montar timeline de trechos e preservar o original",
+    "Renderização de preview rápido ou final com FFmpeg, áudio com fades de 30ms entre cortes",
+    "Opções de formato Original, 16:9, 9:16 e 1:1, com grade leve opcional",
+    "Vídeos editados são salvos em midias/Editados e aparecem no histórico/Biblioteca"
   ],
   "files": [
     {
       "path": "README.md",
-      "url": "https://raw.githubusercontent.com/rarodigital/nserver/main/releases/0.3.6/files/README.md",
+      "url": "https://raw.githubusercontent.com/rarodigital/nserver/main/releases/0.3.7/files/README.md",
       "sha256": "94eb40716ac8282474d5b61d00db9eb06f1a25157ef09a639a937047df40b38b"
     },
     {
+      "path": "requirements.txt",
+      "url": "https://raw.githubusercontent.com/rarodigital/nserver/main/releases/0.3.7/files/requirements.txt",
+      "sha256": "ac2ab1121d08e6be7702b8b48f9aab84e069cc67dae34d5d16c24745fef388b5"
+    },
+    {
+      "path": "iniciar-nserver.bat",
+      "url": "https://raw.githubusercontent.com/rarodigital/nserver/main/releases/0.3.7/files/iniciar-nserver.bat",
+      "sha256": "ad888d43239241a4426776c33a065733161372bd1fd9d1921a37c9b7159145f8"
+    },
+    {
+      "path": "app/server.py",
+      "url": "https://raw.githubusercontent.com/rarodigital/nserver/main/releases/0.3.7/files/app/server.py",
+      "sha256": "1c062381cbec2e14a7a2d7f9bd0fec798d4a81cdd3510e5805e0461f1cb65283"
+    },
+    {
+      "path": "app/updater.py",
+      "url": "https://raw.githubusercontent.com/rarodigital/nserver/main/releases/0.3.7/files/app/updater.py",
+      "sha256": "62c10f9260bf57f9f9ea4698ff173a2040e4af215b4d089707e20f8d489572f8"
+    },
+    {
       "path": "app/launcher.py",
-      "url": "https://raw.githubusercontent.com/rarodigital/nserver/main/releases/0.3.6/files/app/launcher.py",
-      "sha256": "1e7c0fc3392515df65fa9140ee76665decb0006cfe23375fa0d7ff9d74c7cac3"
+      "url": "https://raw.githubusercontent.com/rarodigital/nserver/main/releases/0.3.7/files/app/launcher.py",
+      "sha256": "d7d211145a61c674d0ae7aea754a9c487d4daeac27bf317b4fb473e636a601ce"
     },
     {
       "path": "app/processors/__init__.py",
-      "url": "https://raw.githubusercontent.com/rarodigital/nserver/main/releases/0.3.6/files/app/processors/__init__.py",
+      "url": "https://raw.githubusercontent.com/rarodigital/nserver/main/releases/0.3.7/files/app/processors/__init__.py",
       "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
     },
     {
       "path": "app/processors/base.py",
-      "url": "https://raw.githubusercontent.com/rarodigital/nserver/main/releases/0.3.6/files/app/processors/base.py",
+      "url": "https://raw.githubusercontent.com/rarodigital/nserver/main/releases/0.3.7/files/app/processors/base.py",
       "sha256": "9026cbdc760e1aaad6b5e266709259f5979572cb1e6dddc48c32f9066a0d6d8e"
     },
     {
       "path": "app/processors/video.py",
-      "url": "https://raw.githubusercontent.com/rarodigital/nserver/main/releases/0.3.6/files/app/processors/video.py",
+      "url": "https://raw.githubusercontent.com/rarodigital/nserver/main/releases/0.3.7/files/app/processors/video.py",
       "sha256": "ca3292c73c4d885ee11c9ed0150d587bac08ed53d3ec7ef22a52abfc1a4a5444"
     },
     {
-      "path": "app/server.py",
-      "url": "https://raw.githubusercontent.com/rarodigital/nserver/main/releases/0.3.6/files/app/server.py",
-      "sha256": "fee3ebbcfa3827888a201c79844ca471c2ac233783a90749ea292eba8ce3f089"
-    },
-    {
-      "path": "app/updater.py",
-      "url": "https://raw.githubusercontent.com/rarodigital/nserver/main/releases/0.3.6/files/app/updater.py",
-      "sha256": "62c10f9260bf57f9f9ea4698ff173a2040e4af215b4d089707e20f8d489572f8"
-    },
-    {
-      "path": "iniciar-nserver.bat",
-      "url": "https://raw.githubusercontent.com/rarodigital/nserver/main/releases/0.3.6/files/iniciar-nserver.bat",
-      "sha256": "ad888d43239241a4426776c33a065733161372bd1fd9d1921a37c9b7159145f8"
-    },
-    {
-      "path": "requirements.txt",
-      "url": "https://raw.githubusercontent.com/rarodigital/nserver/main/releases/0.3.6/files/requirements.txt",
-      "sha256": "ac2ab1121d08e6be7702b8b48f9aab84e069cc67dae34d5d16c24745fef388b5"
+      "path": "app/processors/editor.py",
+      "url": "https://raw.githubusercontent.com/rarodigital/nserver/main/releases/0.3.7/files/app/processors/editor.py",
+      "sha256": "e9d932565fddfc1e39c0edee5b0638319e0825ab58ead130864e7c46f3d7ecef"
     },
     {
       "path": "system/update-manifest.example.json",
-      "url": "https://raw.githubusercontent.com/rarodigital/nserver/main/releases/0.3.6/files/system/update-manifest.example.json",
+      "url": "https://raw.githubusercontent.com/rarodigital/nserver/main/releases/0.3.7/files/system/update-manifest.example.json",
       "sha256": "a4056162df090ca241bbab3c447b3eca957c7833731885524e1a6ce30c50d73a"
     }
   ]

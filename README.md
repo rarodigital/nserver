@@ -22,3 +22,7 @@ Pastas preservadas sempre:
 - `midias`
 - `backups`
 - `logs`
+
+## Versão 0.3.7
+
+Inclui a Ferramenta 04 — Editor de Vídeo, com timeline de cortes, preview/final e saída em `midias/Editados`.
