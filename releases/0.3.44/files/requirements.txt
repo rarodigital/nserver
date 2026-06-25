@@ -1,0 +1,8 @@
+yt-dlp>=2025.6.9
+curl_cffi>=0.7.0
+
+# Transcrição local gratuita. Pode demorar para instalar na primeira vez.
+faster-whisper>=1.1.0
+
+# FFmpeg empacotado para mesclar vídeo+áudio no download MP4.
+imageio-ffmpeg>=0.5.1

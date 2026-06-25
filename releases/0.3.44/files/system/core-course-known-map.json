@@ -1,0 +1,502 @@
+{
+  "id": "core-known-metodo-audience",
+  "title": "Método Audience",
+  "source_url": "https://treinamentos.coreeducacao.com/area/vitrine/home",
+  "mapped_at": "fallback-local",
+  "modules": [
+    {
+      "id": "1684219",
+      "title": "Comece por aqui...",
+      "url": "https://treinamentos.coreeducacao.com/area/conteudo/modulo/1684219",
+      "lessons": [
+        {
+          "id": "8410443",
+          "title": "Eu tenho um presente para você...",
+          "url": "https://treinamentos.coreeducacao.com/area/conteudo/aula/8410443"
+        }
+      ],
+      "order": 1
+    },
+    {
+      "id": "1682180",
+      "title": "O Plano para Crescer no Instagram",
+      "url": "https://treinamentos.coreeducacao.com/area/conteudo/modulo/1682180",
+      "lessons": [
+        {
+          "id": "8390941",
+          "title": "Quem Sou Eu",
+          "url": "https://treinamentos.coreeducacao.com/area/conteudo/aula/8390941"
+        },
+        {
+          "id": "8390942",
+          "title": "Porque Audiência Vale Mais Que Dinheiro?",
+          "url": "https://treinamentos.coreeducacao.com/area/conteudo/aula/8390942"
+        },
+        {
+          "id": "8390947",
+          "title": "O Plano para Crescer no Instagram",
+          "url": "https://treinamentos.coreeducacao.com/area/conteudo/aula/8390947"
+        },
+        {
+          "id": "8390949",
+          "title": "Os 3 Pilares do Método Audience",
+          "url": "https://treinamentos.coreeducacao.com/area/conteudo/aula/8390949"
+        },
+        {
+          "id": "8390953",
+          "title": "Porque eu Deveria Te Seguir",
+          "url": "https://treinamentos.coreeducacao.com/area/conteudo/aula/8390953"
+        }
+      ],
+      "order": 2
+    },
+    {
+      "id": "1682181",
+      "title": "Como Funciona o Algoritmo do Instagram",
+      "url": "https://treinamentos.coreeducacao.com/area/conteudo/modulo/1682181",
+      "lessons": [
+        {
+          "id": "8390955",
+          "title": "Qual é a missão do Algoritmo",
+          "url": "https://treinamentos.coreeducacao.com/area/conteudo/aula/8390955"
+        },
+        {
+          "id": "8390957",
+          "title": "Exercício",
+          "url": "https://treinamentos.coreeducacao.com/area/conteudo/aula/8390957"
+        },
+        {
+          "id": "8390959",
+          "title": "As 3 métricas que devemos analisar",
+          "url": "https://treinamentos.coreeducacao.com/area/conteudo/aula/8390959"
+        }
+      ],
+      "order": 3
+    },
+    {
+      "id": "1682182",
+      "title": "Encontrando Assuntos Virais",
+      "url": "https://treinamentos.coreeducacao.com/area/conteudo/modulo/1682182",
+      "lessons": [
+        {
+          "id": "8390961",
+          "title": "O que é um Assunto Viral",
+          "url": "https://treinamentos.coreeducacao.com/area/conteudo/aula/8390961"
+        },
+        {
+          "id": "8390962",
+          "title": "Os 3 Tipos de Assuntos Virais",
+          "url": "https://treinamentos.coreeducacao.com/area/conteudo/aula/8390962"
+        },
+        {
+          "id": "8390964",
+          "title": "Pesquisa Magnética - Como Encontrar Assuntos Virais",
+          "url": "https://treinamentos.coreeducacao.com/area/conteudo/aula/8390964"
+        },
+        {
+          "id": "8390967",
+          "title": "Exercício",
+          "url": "https://treinamentos.coreeducacao.com/area/conteudo/aula/8390967"
+        }
+      ],
+      "order": 4
+    },
+    {
+      "id": "1682183",
+      "title": "Dominando a Ciência da Atenção",
+      "url": "https://treinamentos.coreeducacao.com/area/conteudo/modulo/1682183",
+      "lessons": [
+        {
+          "id": "8471112",
+          "title": "Os 3 Tipos de Headline",
+          "url": "https://treinamentos.coreeducacao.com/area/conteudo/aula/8471112"
+        },
+        {
+          "id": "8471113",
+          "title": "Gatilho da Recompensa",
+          "url": "https://treinamentos.coreeducacao.com/area/conteudo/aula/8471113"
+        },
+        {
+          "id": "8471116",
+          "title": "Gatilho do Mistério",
+          "url": "https://treinamentos.coreeducacao.com/area/conteudo/aula/8471116"
+        },
+        {
+          "id": "8471123",
+          "title": "Gatilho do Reconhecimento",
+          "url": "https://treinamentos.coreeducacao.com/area/conteudo/aula/8471123"
+        },
+        {
+          "id": "8471132",
+          "title": "Gatilho da Popularidade",
+          "url": "https://treinamentos.coreeducacao.com/area/conteudo/aula/8471132"
+        },
+        {
+          "id": "8471158",
+          "title": "Gatilho da Crença",
+          "url": "https://treinamentos.coreeducacao.com/area/conteudo/aula/8471158"
+        },
+        {
+          "id": "8471178",
+          "title": "Gatilho da Autoridade",
+          "url": "https://treinamentos.coreeducacao.com/area/conteudo/aula/8471178"
+        },
+        {
+          "id": "8471200",
+          "title": "Gatilho da Disrupção",
+          "url": "https://treinamentos.coreeducacao.com/area/conteudo/aula/8471200"
+        }
+      ],
+      "order": 5
+    },
+    {
+      "id": "1682184",
+      "title": "Criando Headlines",
+      "url": "https://treinamentos.coreeducacao.com/area/conteudo/modulo/1682184",
+      "lessons": [
+        {
+          "id": "8471316",
+          "title": "As duas formas de escala",
+          "url": "https://treinamentos.coreeducacao.com/area/conteudo/aula/8471316"
+        },
+        {
+          "id": "8471321",
+          "title": "Meu processo de criação",
+          "url": "https://treinamentos.coreeducacao.com/area/conteudo/aula/8471321"
+        },
+        {
+          "id": "8471327",
+          "title": "Estruturas validadas",
+          "url": "https://treinamentos.coreeducacao.com/area/conteudo/aula/8471327"
+        },
+        {
+          "id": "8466062",
+          "title": "Template 01",
+          "url": "https://treinamentos.coreeducacao.com/area/conteudo/aula/8466062"
+        },
+        {
+          "id": "8466063",
+          "title": "Template 02",
+          "url": "https://treinamentos.coreeducacao.com/area/conteudo/aula/8466063"
+        },
+        {
+          "id": "8466064",
+          "title": "Template 03",
+          "url": "https://treinamentos.coreeducacao.com/area/conteudo/aula/8466064"
+        },
+        {
+          "id": "8466065",
+          "title": "Template 04",
+          "url": "https://treinamentos.coreeducacao.com/area/conteudo/aula/8466065"
+        },
+        {
+          "id": "8466066",
+          "title": "Template 05",
+          "url": "https://treinamentos.coreeducacao.com/area/conteudo/aula/8466066"
+        },
+        {
+          "id": "8466067",
+          "title": "Template 06",
+          "url": "https://treinamentos.coreeducacao.com/area/conteudo/aula/8466067"
+        },
+        {
+          "id": "8466068",
+          "title": "Template 07",
+          "url": "https://treinamentos.coreeducacao.com/area/conteudo/aula/8466068"
+        },
+        {
+          "id": "8466069",
+          "title": "Template 08",
+          "url": "https://treinamentos.coreeducacao.com/area/conteudo/aula/8466069"
+        },
+        {
+          "id": "8466070",
+          "title": "Template 09",
+          "url": "https://treinamentos.coreeducacao.com/area/conteudo/aula/8466070"
+        },
+        {
+          "id": "8466071",
+          "title": "Template 10",
+          "url": "https://treinamentos.coreeducacao.com/area/conteudo/aula/8466071"
+        },
+        {
+          "id": "8466072",
+          "title": "Template 11",
+          "url": "https://treinamentos.coreeducacao.com/area/conteudo/aula/8466072"
+        },
+        {
+          "id": "8466073",
+          "title": "Template 12",
+          "url": "https://treinamentos.coreeducacao.com/area/conteudo/aula/8466073"
+        },
+        {
+          "id": "8466074",
+          "title": "Template 13",
+          "url": "https://treinamentos.coreeducacao.com/area/conteudo/aula/8466074"
+        },
+        {
+          "id": "8466075",
+          "title": "Template 14",
+          "url": "https://treinamentos.coreeducacao.com/area/conteudo/aula/8466075"
+        },
+        {
+          "id": "8466076",
+          "title": "Template 15",
+          "url": "https://treinamentos.coreeducacao.com/area/conteudo/aula/8466076"
+        },
+        {
+          "id": "8466077",
+          "title": "Template 16",
+          "url": "https://treinamentos.coreeducacao.com/area/conteudo/aula/8466077"
+        },
+        {
+          "id": "8466078",
+          "title": "Template 17",
+          "url": "https://treinamentos.coreeducacao.com/area/conteudo/aula/8466078"
+        },
+        {
+          "id": "8466080",
+          "title": "Template 18",
+          "url": "https://treinamentos.coreeducacao.com/area/conteudo/aula/8466080"
+        },
+        {
+          "id": "8466079",
+          "title": "Template 19",
+          "url": "https://treinamentos.coreeducacao.com/area/conteudo/aula/8466079"
+        },
+        {
+          "id": "8466081",
+          "title": "Template 20",
+          "url": "https://treinamentos.coreeducacao.com/area/conteudo/aula/8466081"
+        },
+        {
+          "id": "8466082",
+          "title": "Template 21",
+          "url": "https://treinamentos.coreeducacao.com/area/conteudo/aula/8466082"
+        },
+        {
+          "id": "8466083",
+          "title": "Template 22",
+          "url": "https://treinamentos.coreeducacao.com/area/conteudo/aula/8466083"
+        },
+        {
+          "id": "8466084",
+          "title": "Template 23",
+          "url": "https://treinamentos.coreeducacao.com/area/conteudo/aula/8466084"
+        },
+        {
+          "id": "8466085",
+          "title": "Template 24",
+          "url": "https://treinamentos.coreeducacao.com/area/conteudo/aula/8466085"
+        },
+        {
+          "id": "8466086",
+          "title": "Template 25",
+          "url": "https://treinamentos.coreeducacao.com/area/conteudo/aula/8466086"
+        },
+        {
+          "id": "8466087",
+          "title": "Template 26",
+          "url": "https://treinamentos.coreeducacao.com/area/conteudo/aula/8466087"
+        },
+        {
+          "id": "8466088",
+          "title": "Template 27",
+          "url": "https://treinamentos.coreeducacao.com/area/conteudo/aula/8466088"
+        },
+        {
+          "id": "8466089",
+          "title": "Template 28",
+          "url": "https://treinamentos.coreeducacao.com/area/conteudo/aula/8466089"
+        },
+        {
+          "id": "8466090",
+          "title": "Template 29",
+          "url": "https://treinamentos.coreeducacao.com/area/conteudo/aula/8466090"
+        },
+        {
+          "id": "8466091",
+          "title": "Template 30",
+          "url": "https://treinamentos.coreeducacao.com/area/conteudo/aula/8466091"
+        }
+      ],
+      "order": 6
+    },
+    {
+      "id": "1682185",
+      "title": "Conteúdos Notáveis",
+      "url": "https://treinamentos.coreeducacao.com/area/conteudo/modulo/1682185",
+      "lessons": [
+        {
+          "id": "8471409",
+          "title": "O Princípio da Notabilidade",
+          "url": "https://treinamentos.coreeducacao.com/area/conteudo/aula/8471409"
+        },
+        {
+          "id": "8471414",
+          "title": "Moeda Social: Porque compartilhamos algo?",
+          "url": "https://treinamentos.coreeducacao.com/area/conteudo/aula/8471414"
+        },
+        {
+          "id": "8471418",
+          "title": "As Regras Obrigatórias de um Conteúdo",
+          "url": "https://treinamentos.coreeducacao.com/area/conteudo/aula/8471418"
+        },
+        {
+          "id": "8471425",
+          "title": "Elemento 1 - Valor Prático",
+          "url": "https://treinamentos.coreeducacao.com/area/conteudo/aula/8471425"
+        },
+        {
+          "id": "8471447",
+          "title": "Elemento 2 - Pontos de Identificação",
+          "url": "https://treinamentos.coreeducacao.com/area/conteudo/aula/8471447"
+        },
+        {
+          "id": "8471452",
+          "title": "Elemento 3 - Opinião Forte",
+          "url": "https://treinamentos.coreeducacao.com/area/conteudo/aula/8471452"
+        },
+        {
+          "id": "8471454",
+          "title": "Elemento 4 - Argumentações Poderosas",
+          "url": "https://treinamentos.coreeducacao.com/area/conteudo/aula/8471454"
+        },
+        {
+          "id": "8471456",
+          "title": "Elemento 5 - Notícias",
+          "url": "https://treinamentos.coreeducacao.com/area/conteudo/aula/8471456"
+        },
+        {
+          "id": "8471458",
+          "title": "Elemento 6 - Histórias",
+          "url": "https://treinamentos.coreeducacao.com/area/conteudo/aula/8471458"
+        },
+        {
+          "id": "8471474",
+          "title": "Elemento 7 - Provas",
+          "url": "https://treinamentos.coreeducacao.com/area/conteudo/aula/8471474"
+        },
+        {
+          "id": "8471475",
+          "title": "Elemento 8 - Fatos Curiosos",
+          "url": "https://treinamentos.coreeducacao.com/area/conteudo/aula/8471475"
+        },
+        {
+          "id": "8471525",
+          "title": "Exercício",
+          "url": "https://treinamentos.coreeducacao.com/area/conteudo/aula/8471525"
+        }
+      ],
+      "order": 7
+    },
+    {
+      "id": "1682186",
+      "title": "Construindo Seu Núcleo de Influencia",
+      "url": "https://treinamentos.coreeducacao.com/area/conteudo/modulo/1682186",
+      "lessons": [
+        {
+          "id": "8593913",
+          "title": "O que é o Núcleo de Influencia",
+          "url": "https://treinamentos.coreeducacao.com/area/conteudo/aula/8593913"
+        },
+        {
+          "id": "8593917",
+          "title": "Quem é você?",
+          "url": "https://treinamentos.coreeducacao.com/area/conteudo/aula/8593917"
+        },
+        {
+          "id": "8593918",
+          "title": "Qual a sua História?",
+          "url": "https://treinamentos.coreeducacao.com/area/conteudo/aula/8593918"
+        },
+        {
+          "id": "8593919",
+          "title": "História de Sustentação",
+          "url": "https://treinamentos.coreeducacao.com/area/conteudo/aula/8593919"
+        },
+        {
+          "id": "8593921",
+          "title": "Quem você ajuda?",
+          "url": "https://treinamentos.coreeducacao.com/area/conteudo/aula/8593921"
+        },
+        {
+          "id": "8593923",
+          "title": "Qual dor você resolve?",
+          "url": "https://treinamentos.coreeducacao.com/area/conteudo/aula/8593923"
+        },
+        {
+          "id": "8593924",
+          "title": "Qual transformação você gera?",
+          "url": "https://treinamentos.coreeducacao.com/area/conteudo/aula/8593924"
+        },
+        {
+          "id": "8593925",
+          "title": "Quem é seu inimigo?",
+          "url": "https://treinamentos.coreeducacao.com/area/conteudo/aula/8593925"
+        },
+        {
+          "id": "8593926",
+          "title": "Quais são as provas que você está certo?",
+          "url": "https://treinamentos.coreeducacao.com/area/conteudo/aula/8593926"
+        },
+        {
+          "id": "8593928",
+          "title": "Quais são suas maiores convicções?",
+          "url": "https://treinamentos.coreeducacao.com/area/conteudo/aula/8593928"
+        },
+        {
+          "id": "8593929",
+          "title": "Quais são seus bordões e palavras sagradas?",
+          "url": "https://treinamentos.coreeducacao.com/area/conteudo/aula/8593929"
+        }
+      ],
+      "order": 8
+    },
+    {
+      "id": "1684492",
+      "title": "Bônus - Edição Magnética",
+      "url": "https://treinamentos.coreeducacao.com/area/conteudo/modulo/1684492",
+      "lessons": [
+        {
+          "id": "8411821",
+          "title": "Aula 1 – Introdução",
+          "url": "https://treinamentos.coreeducacao.com/area/conteudo/aula/8411821"
+        },
+        {
+          "id": "8411822",
+          "title": "Aula 2 – Princípios Básicos",
+          "url": "https://treinamentos.coreeducacao.com/area/conteudo/aula/8411822"
+        },
+        {
+          "id": "8411823",
+          "title": "Aula 3 – Conhecendo o App Inshot",
+          "url": "https://treinamentos.coreeducacao.com/area/conteudo/aula/8411823"
+        },
+        {
+          "id": "8411824",
+          "title": "Aula 4 – Conhecendo o App CapCut",
+          "url": "https://treinamentos.coreeducacao.com/area/conteudo/aula/8411824"
+        },
+        {
+          "id": "8411825",
+          "title": "Aula 5 – Edição na Prática",
+          "url": "https://treinamentos.coreeducacao.com/area/conteudo/aula/8411825"
+        },
+        {
+          "id": "8411826",
+          "title": "Aula 6 – Encerramento",
+          "url": "https://treinamentos.coreeducacao.com/area/conteudo/aula/8411826"
+        },
+        {
+          "id": "8390941",
+          "title": "Próximo",
+          "url": "https://treinamentos.coreeducacao.com/area/conteudo/aula/8390941"
+        }
+      ],
+      "order": 9
+    }
+  ],
+  "total_modules": 9,
+  "total_lessons": 84
+}

@@ -1,0 +1,21 @@
+{
+  "app": "Nserver",
+  "version": "0.3.0",
+  "latest_version": "0.3.0",
+  "channels": {
+    "stable": "0.3.0",
+    "beta": "0.3.0-beta"
+  },
+  "changelog": [
+    "Exemplo: nova ferramenta de transcrição",
+    "Exemplo: correções de bugs",
+    "Exemplo: melhorias de desempenho"
+  ],
+  "files": [
+    {
+      "path": "app/server.py",
+      "url": "https://seu-servidor.com/nserver/releases/0.3.0/app/server.py",
+      "sha256": "preencher_checksum_sha256"
+    }
+  ]
+}
